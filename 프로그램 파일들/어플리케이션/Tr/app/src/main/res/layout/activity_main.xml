@@ -1,0 +1,600 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+
+    <!-- //end 타이틀바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="top"
+        android:layout_height="wrap_content">
+        <!-- 타이틀바 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/app_name"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:background="@color/theme_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <EditText
+                android:id="@+id/txtText1"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:alpha="0.87"
+                android:gravity="center"
+                android:background="@drawable/back"
+                android:layout_width="40dp"
+                android:hint="ID"
+                android:singleLine="true"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:background="@drawable/back"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:onClick="mOnupdate"
+                android:text="새로고침"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:visibility="visible" />
+            <Button
+                android:text="자료확인"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:baselineAligned="false"
+                android:background="@drawable/back"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:visibility="visible"
+                android:onClick="mOnMiddle" />
+            <Button
+                android:text="업로드"
+                android:background="@drawable/back"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:visibility="gone"
+                android:onClick="mOnMove"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/updatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메세지 업데이트 :"
+            android:layout_marginLeft="30dp"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+    </View>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+    </View>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="속도"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/sptv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/back"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="토크"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tqtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/back"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="회전수"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tstv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/back"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="전체"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="불량"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="불량률"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/totaltv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/badcounttv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/badpertv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back"
+                    android:textColor="@color/black"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="시작"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="정상"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:textColor="@color/black"
+                    android:text="불량"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/startImgoff"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:src="@drawable/voidcircle"/>
+
+                <ImageView
+                    android:id="@+id/passImgoff"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:src="@drawable/voidcircle"/>
+
+                <ImageView
+                    android:id="@+id/rejectImgoff"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:src="@drawable/voidcircle"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp" />
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="#ffffff"
+            android:text="설정"
+            android:textSize="17sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:textColor="@color/theme_color"
+            android:text="속도"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <SeekBar
+            android:id="@+id/spseekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="1000"
+            android:progress="500"/>
+        <EditText
+            android:id="@+id/spET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:inputType="number"
+            android:alpha="0.87"
+            android:gravity="center"
+            android:hint="입력"
+            android:singleLine="true"/>
+        <Button
+            android:onClick="onSpeed"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/back"
+            android:text="전송"
+            android:textSize="17sp"
+            android:gravity="center"   />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:textColor="@color/theme_color"
+            android:text="토크"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <SeekBar
+            android:id="@+id/tqseekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="1000"
+            android:progress="500"/>
+        <EditText
+            android:id="@+id/tqET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:inputType="number"
+            android:alpha="0.87"
+            android:gravity="center"
+            android:hint="입력"
+            android:singleLine="true"/>
+        <Button
+            android:onClick="onTorque"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/back"
+            android:text="전송"
+            android:textSize="17sp"
+            android:gravity="center"   />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:textColor="@color/theme_color"
+            android:text="횟수"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <SeekBar
+            android:id="@+id/tsseekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="16"
+            android:progress="1"/>
+        <EditText
+            android:id="@+id/tsET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:alpha="0.87"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="입력"
+            android:singleLine="true"/>
+        <Button
+            android:onClick="onTurns"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/back"
+            android:text="전송"
+            android:textSize="17sp"
+            android:gravity="center"   />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:id="@+id/mqttmessage"
+            android:text="mqtt 메세지"
+            android:textSize="12sp"
+            android:gravity="end"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:onClick="onGo"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/back"
+            android:text="동작"
+            android:textSize="17sp"
+            android:gravity="center"   />
+        <Button
+            android:onClick="onStop"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/back"
+            android:text="정지"
+            android:textSize="17sp"
+            android:gravity="center"   />
+
+    </LinearLayout>
+</LinearLayout>
