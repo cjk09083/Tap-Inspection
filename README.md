@@ -24,6 +24,12 @@
 
 ### 1. 나사선의 불량 여부 판별
  - 모터끝에 나사를 달아 나사선에 삽입/회전시키고 일정량 이상의 역토크가 발생시 에러감지 
+<div align="center">
+<img src="https://github.com/cjk09083/Tap-Inspection/blob/main/%EC%82%AC%EC%A7%84%20%EB%B0%8F%20%EC%98%81%EC%83%81/%EB%8F%99%EC%9E%91%EC%98%81%EC%83%81.gif" width="30%"/>
+</div></br>
 
 ### 2. 어플리케이션 연동
  - 검사 변수를 설정 및 동작 제어하고 검사 결과를 모니터링
+<div align="center">
+<img src="https://github.com/cjk09083/Tap-Inspection/blob/main/%EC%82%AC%EC%A7%84%20%EB%B0%8F%20%EC%98%81%EC%83%81/%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%ED%99%94%EB%A9%B4.jpg" width="30%"/>
+</div></br>
